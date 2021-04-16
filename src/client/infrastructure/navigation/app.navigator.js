@@ -5,15 +5,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Home } from '../../features/home/home.screen';
 import { AddProduct } from '../../features/addProduct/addProduct.screen';
 import { Search } from '../../features/search/search.screen';
-import { Lists } from '../../features/lists/lists.screen';
 import { Menu } from '../../features/menu/menu.modal';
+import { ListsNavigator } from './lists.navigator';
 
 const Tab = createBottomTabNavigator();
 
 export const AppNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName='Home'
+      initialRouteName='Lists'
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -41,7 +41,7 @@ export const AppNavigator = () => {
       }}
     >
       <Tab.Screen name='Home' component={Home} />
-      <Tab.Screen name='Lists' component={Lists} />
+      <Tab.Screen name='Lists' component={ListsNavigator} />
       <Tab.Screen name='Add' component={AddProduct} />
       <Tab.Screen name='Search' component={Search} />
       <Tab.Screen name='Menu' component={Menu} />
