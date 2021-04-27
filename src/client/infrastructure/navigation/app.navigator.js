@@ -3,10 +3,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Home } from '../../features/home/home.screen';
-import { AddProduct } from '../../features/addProduct/addProduct.screen';
 import { Search } from '../../features/search/search.screen';
-import { Menu } from '../../features/menu/menu.modal';
 import { ListsNavigator } from './lists.navigator';
+import { MenuNavigator } from './menu.navigator';
+import { AddProductNavigator } from './add-product.navigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,9 +42,9 @@ export const AppNavigator = () => {
     >
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Lists' component={ListsNavigator} />
-      <Tab.Screen name='Add' component={AddProduct} />
+      <Tab.Screen name='Add' component={AddProductNavigator} />
       <Tab.Screen name='Search' component={Search} />
-      <Tab.Screen name='Menu' component={Menu} />
+      <Tab.Screen name='Menu' component={MenuNavigator} />
     </Tab.Navigator>
   );
 };

@@ -1,12 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { SafeArea } from '../../components/utility/safe-area.component';
+
+import { PageContainer, PageTitle } from '../global.styles';
 
 export const Search = () => {
   return (
     <>
       <SafeArea>
-        <Text>Search screen</Text>
+        <PageContainer>
+          <PageTitle>Search</PageTitle>
+        </PageContainer>
       </SafeArea>
     </>
   );
