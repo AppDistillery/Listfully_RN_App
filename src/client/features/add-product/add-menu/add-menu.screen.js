@@ -12,7 +12,7 @@ export const AddMenu = ({ navigation }) => {
           <Icon name='camera' type='font-awesome' size={20} color='#FAFAFC' />
           <BtnText>Camera</BtnText>
         </Btn>
-        <Btn onPress={() => console.log('Pressen')}>
+        <Btn onPress={() => navigation.navigate('Add Product')}>
           <Icon
             name='barcode-scan'
             type='material-community'
@@ -21,7 +21,7 @@ export const AddMenu = ({ navigation }) => {
           />
           <BtnText>Barcode</BtnText>
         </Btn>
-        <Btn onPress={() => console.log('Pressen')}>
+        <Btn onPress={() => navigation.navigate('Add Product')}>
           <Icon name='link' type='entypo' size={20} color='#FAFAFC' />
           <BtnText>Link</BtnText>
         </Btn>

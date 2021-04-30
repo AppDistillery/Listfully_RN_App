@@ -9,11 +9,9 @@ import {
   DetailsImage,
   DetailIconContainer,
   DetailsInfoContainer,
-  DetailsTitle,
-  DetailsLinkText,
-  DetailsPrice,
-  DetailsComment,
-  DetailsQuantity
+  DetailsInfoTextContainer,
+  DetailsInfoTextPressable,
+  DetailsText
 } from './list-item-details-card.styles';
 
 export const ListItemDetailsCard = ({ details }) => {
@@ -31,16 +29,26 @@ export const ListItemDetailsCard = ({ details }) => {
         <Icon name='playlist-add' type='material' />
       </DetailIconContainer>
       <DetailsInfoContainer>
-        <DetailsTitle>{name}</DetailsTitle>
-        <Pressable onPress={() => WebBrowser.openBrowserAsync(url)}>
-          <DetailsLinkText>
+        <DetailsInfoTextContainer>
+          <DetailsText>{name}</DetailsText>
+        </DetailsInfoTextContainer>
+        <DetailsInfoTextPressable
+          onPress={() => WebBrowser.openBrowserAsync(url)}
+        >
+          <DetailsText>
             Link to produkt{' '}
             <Icon name='external-link-alt' type='font-awesome-5' size={20} />
-          </DetailsLinkText>
-        </Pressable>
-        <DetailsPrice>{price}</DetailsPrice>
-        <DetailsQuantity>{quantity}</DetailsQuantity>
-        <DetailsComment>{description}</DetailsComment>
+          </DetailsText>
+        </DetailsInfoTextPressable>
+        <DetailsInfoTextContainer>
+          <DetailsText>kr {price}</DetailsText>
+        </DetailsInfoTextContainer>
+        <DetailsInfoTextContainer>
+          <DetailsText>Quantity: {quantity}</DetailsText>
+        </DetailsInfoTextContainer>
+        <DetailsInfoTextContainer>
+          <DetailsText>{description}</DetailsText>
+        </DetailsInfoTextContainer>
       </DetailsInfoContainer>
     </DetailsCard>
   );

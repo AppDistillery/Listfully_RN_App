@@ -8,6 +8,11 @@ import {
   PageTitle,
   FlexContainer
 } from '../../global.styles';
+import {
+  BackBtn,
+  BackBtnContainer,
+  BackBtnRightSpace
+} from '../../../components/utility/back-btn.component';
 
 export const ListItemsScreen = ({ navigation, route }) => {
   const { name, items } = route.params.listItems;
@@ -16,21 +21,13 @@ export const ListItemsScreen = ({ navigation, route }) => {
     <>
       <SafeArea>
         <ListPagesContainer>
-          <PageTitle>{name}</PageTitle>
+          <BackBtn navigate={navigation} name={name} />
           <FlexContainer>
             <FlatList
               data={items}
               renderItem={({ item }) => {
                 return (
-                  <Pressable
-                    onPress={() =>
-                      navigation.navigate('List item details', {
-                        listItemDetails: item
-                      })
-                    }
-                  >
-                    <ListItemsCard listItem={item} />
-                  </Pressable>
+                  <ListItemsCard listItem={item} navigation={navigation} />
                 );
               }}
               keyExtractor={(item) => item.id}

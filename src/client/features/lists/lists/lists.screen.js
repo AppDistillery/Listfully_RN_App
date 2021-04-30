@@ -7,8 +7,7 @@ import { SafeArea } from '../../../components/utility/safe-area.component';
 import {
   ListPagesContainer,
   PageTitle,
-  FlexContainer,
-  FlexPressable
+  FlexContainer
 } from '../../global.styles';
 
 export const ListsScreen = ({ navigation }) => {
@@ -20,19 +19,8 @@ export const ListsScreen = ({ navigation }) => {
           <FlexContainer>
             <FlatList
               data={DATA}
-              // formatData(DATA, numColums)
               renderItem={({ item }) => {
-                return (
-                  <FlexPressable
-                    onPress={() =>
-                      navigation.navigate('List items', {
-                        listItems: item
-                      })
-                    }
-                  >
-                    <ListCard lists={item} />
-                  </FlexPressable>
-                );
+                return <ListCard lists={item} navigation={navigation} />;
               }}
               keyExtractor={(item) => item.id}
               numColumns={2}

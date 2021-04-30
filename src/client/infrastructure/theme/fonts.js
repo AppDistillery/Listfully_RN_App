@@ -6,6 +6,7 @@ export const fonts = {
 };
 
 export const fontSizes = {
+  links: '10px',
   caption: '14px',
   button: '14px',
   body: '16px',

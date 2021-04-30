@@ -1,4 +1,4 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, Pressable } from 'react-native';
 import styled from 'styled-components/native';
 
 export const ItemCard = styled(View)`
@@ -6,6 +6,11 @@ export const ItemCard = styled(View)`
   margin: 3px;
   height: 150px;
   background-color: ${({ theme }) => theme.colors.linen40};
+`;
+
+export const NavToDetailsPressable = styled(Pressable)`
+  flex-direction: row;
+  flex: 7;
 `;
 
 export const ImageContainer = styled(View)`
@@ -23,39 +28,51 @@ export const Images = styled(Image)`
 
 export const ItemInfoContainer = styled(View)`
   flex: 3;
-  align-items: flex-start;
-  justify-content: space-evenly;
   padding-left: 10px;
-  width: 100%;
 `;
 
-export const Title = styled(Text)`
+export const InfoTitleContainer = styled(View)`
+  flex: 3;
+  justify-content: center;
+`;
+
+export const InfoPriceContainer = styled(View)`
+  flex: 2;
+  justify-content: flex-start;
+`;
+
+export const InfoQuantityContainer = styled(View)`
+  flex: 1;
+  justify-content: center;
+`;
+
+export const TextLarge = styled(Text)`
   font-family: ${({ theme }) => theme.fonts.title};
   font-size: ${({ theme }) => theme.fontSizes.h6};
   color: ${({ theme }) => theme.colors.charcoal};
 `;
 
-export const LinkText = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
-export const Price = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
-export const Quantity = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
+export const TextSmall = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes.caption};
   color: ${({ theme }) => theme.colors.charcoal};
 `;
 
 export const ItemMenuContainer = styled(View)`
-  flex: 1;
+  flex: 2;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+`;
+
+export const ItemMenuLinks = styled(Pressable)`
+  flex: 1;
   width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
+export const ItemMenuLinksText = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.links};
+  color: ${({ theme }) => theme.colors.charcoal};
 `;

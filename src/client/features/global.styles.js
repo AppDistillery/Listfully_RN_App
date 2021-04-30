@@ -3,9 +3,12 @@ import {
   View,
   Pressable,
   TextInput,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  Dimensions
 } from 'react-native';
 import styled from 'styled-components/native';
+
+const windowWidth = Math.floor(Dimensions.get('window').width / 2);
 
 export const KeyboardAvoidingContainer = styled(KeyboardAvoidingView)`
   flex: 1;
@@ -19,15 +22,10 @@ export const PageContainer = styled(View)`
 `;
 
 export const ListPagesContainer = styled(View)`
-  padding: 10px;
-  height: 100%;
-`;
-
-export const FlexContainer = styled(View)`
   flex: 1;
 `;
 
-export const FlexPressable = styled(Pressable)`
+export const FlexContainer = styled(View)`
   flex: 1;
 `;
 

@@ -804,14 +804,14 @@ export const DATA = [
   }
   // {
   //   id: 'ffff',
-  //   name: 'Home',
+  //   name: 'Something',
   //   description: 'Stuff I want for my home',
   //   share: 'IN29XfrR0VwQSsdsdDDdsds',
   //   url: 'http://localhost:8000/api/list/eeee/',
   //   items: [
   //     {
   //       id: 'ff01',
-  //       list: 'eeee',
+  //       list: 'ffff',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -827,19 +827,37 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'ff02',
+  //       list: 'ffff',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
   // {
   //   id: 'gggg',
-  //   name: 'Home',
+  //   name: 'Something two',
   //   description: 'Stuff I want for my home',
   //   share: 'IN29XfrR0VwQSsdsdDDdsds',
   //   url: 'http://localhost:8000/api/list/eeee/',
   //   items: [
   //     {
   //       id: 'gg01',
-  //       list: 'eeee',
+  //       list: 'gggg',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -855,19 +873,37 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'gg02',
+  //       list: 'gggg',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
   // {
   //   id: 'hhhh',
-  //   name: 'Home',
+  //   name: 'Something three',
   //   description: 'Stuff I want for my home',
   //   share: 'IN29XfrR0VwQSsdsdDDdsds',
   //   url: 'http://localhost:8000/api/list/eeee/',
   //   items: [
   //     {
   //       id: 'hh01',
-  //       list: 'eeee',
+  //       list: 'hhhh',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -883,19 +919,37 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'hh02',
+  //       list: 'hhhh',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
   // {
   //   id: 'iiii',
-  //   name: 'Home',
+  //   name: 'Something four',
   //   description: 'Stuff I want for my home',
   //   share: 'IN29XfrR0VwQSsdsdDDdsds',
   //   url: 'http://localhost:8000/api/list/eeee/',
   //   items: [
   //     {
   //       id: 'ii01',
-  //       list: 'eeee',
+  //       list: 'iiii',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -911,19 +965,37 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'ii02',
+  //       list: 'iiii',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
   // {
   //   id: 'jjjj',
-  //   name: 'Home',
+  //   name: 'Something five',
   //   description: 'Stuff I want for my home',
   //   share: 'IN29XfrR0VwQSsdsdDDdsds',
   //   url: 'http://localhost:8000/api/list/eeee/',
   //   items: [
   //     {
   //       id: 'jj01',
-  //       list: 'eeee',
+  //       list: 'jjjj',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -939,6 +1011,24 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'jj02',
+  //       list: 'jjjj',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
@@ -951,7 +1041,7 @@ export const DATA = [
   //   items: [
   //     {
   //       id: 'kk01',
-  //       list: 'eeee',
+  //       list: 'kkkk',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -967,6 +1057,24 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'kk02',
+  //       list: 'kkkk',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // },
@@ -979,7 +1087,7 @@ export const DATA = [
   //   items: [
   //     {
   //       id: 'll01',
-  //       list: 'eeee',
+  //       list: 'llll',
   //       name: 'Philips Airfryer XXL Premium',
   //       description:
   //         'Nye Philips Airfryer XXL tenker og steker for deg. Den har Smart Sensing-teknologi og er den eneste Airfryeren som justerer tid og temperatur automatisk under stekingen for perfekt stekte retter.',
@@ -995,6 +1103,24 @@ export const DATA = [
   //       storeId: 'elkjop',
   //       currency: 'NOK',
   //       created: '2021-01-16T12:38:20.109Z'
+  //     },
+  //     {
+  //       id: 'll02',
+  //       list: 'llll',
+  //       name: 'DJI Mavic Air 2',
+  //       description: '4K drone med 10 km rekkevidde',
+  //       location: 'Elkjøp',
+  //       url:
+  //         'https://www.elkjop.no/product/foto-og-video/droner-og-tilbehor/droner/175812/dji-mavic-air-2-drone-med-fly-more-combo',
+  //       image: '',
+  //       external_image:
+  //         'https://pricespy-75b8.kxcdn.com/product/standard/800/5352678.jpg',
+  //       price: '12.390',
+  //       price_category: 0,
+  //       quantity: 1,
+  //       storeId: 'elkjop',
+  //       currency: 'NOK',
+  //       created: '2021-01-14T13:37:37.109Z'
   //     }
   //   ]
   // }

@@ -1,15 +1,19 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, Dimensions, Pressable } from 'react-native';
 import styled from 'styled-components/native';
+
+const cardSize = Math.floor(Dimensions.get('window').width / 2);
 
 // export const Name = styled()``;
 
 export const ListsCard = styled(View)`
-  margin: 3px;
-  height: 175px;
-  background-color: ${({ theme }) => theme.colors.linen40};
+  flex: 1;
+  margin: 6px;
+  height: ${cardSize - 30}px;
+  max-width: ${cardSize - 12}px;
+  background-color: ${({ theme }) => theme.colors.linen};
 `;
 
-export const MenuContainer = styled(View)`
+export const MenuPressable = styled(Pressable)`
   flex: 1;
   flex-direction: row;
   align-items: center;
@@ -19,13 +23,17 @@ export const MenuContainer = styled(View)`
 
 export const ListMenuLock = styled(View)`
   align-self: flex-start;
-  padding-top: 5px;
-  padding-left: 5px;
+  padding-top: 7px;
+  padding-left: 7px;
 `;
 
 export const ListMenuIcon = styled(View)`
   flex: 1;
-  padding-right: 15px;
+  padding-right: 27px;
+`;
+
+export const NavToItemsPressable = styled(Pressable)`
+  flex: 4;
 `;
 
 export const ListNameContainer = styled(View)`
@@ -62,11 +70,24 @@ export const Title = styled(Text)`
   color: ${({ theme }) => theme.colors.charcoal};
 `;
 
-export const CardBlank = styled(View)`
-  flex: 1;
-  background-color: transparent;
+// List menu styling
+
+export const ListMenuHeaderText = styled(Text)`
+  margin-left: 5px;
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.h6};
+  color: ${({ theme }) => theme.colors.stoneGray};
+`;
+
+export const ListMenuIcons = styled(View)`
+  flex: 2;
   align-items: center;
   justify-content: center;
-  margin: 3px;
-  height: 200px;
+`;
+
+export const ListMenuText = styled(Text)`
+  flex: 5;
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.h6};
+  color: ${({ theme }) => theme.colors.charcoal};
 `;

@@ -2,8 +2,8 @@ import { Image, Text, View } from 'react-native';
 import styled from 'styled-components/native';
 
 export const DetailsCard = styled(View)`
+  flex: 1;
   margin: 3px;
-  height: 100%;
   background-color: ${({ theme }) => theme.colors.linen40};
 `;
 
@@ -34,32 +34,17 @@ export const DetailsInfoContainer = styled(View)`
   width: 100%;
 `;
 
-export const DetailsTitle = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
+export const DetailsInfoTextContainer = styled(View)`
+  flex: 1;
+  justify-content: center;
 `;
 
-export const DetailsLinkText = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.earth};
-  text-decoration: underline;
+export const DetailsInfoTextPressable = styled(View)`
+  flex: 1;
+  justify-content: center;
 `;
 
-export const DetailsPrice = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
-export const DetailsQuantity = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
-export const DetailsComment = styled(Text)`
+export const DetailsText = styled(Text)`
   font-family: ${({ theme }) => theme.fonts.title};
   font-size: ${({ theme }) => theme.fontSizes.h6};
   color: ${({ theme }) => theme.colors.charcoal};
