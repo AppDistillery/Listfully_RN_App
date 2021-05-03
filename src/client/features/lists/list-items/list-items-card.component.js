@@ -11,12 +11,10 @@ import {
   InfoTitleContainer,
   InfoPriceContainer,
   InfoQuantityContainer,
-  TextLarge,
-  TextSmall,
   ItemMenuLinks,
-  ItemMenuLinksText,
   NavToDetailsPressable
 } from './list-items-card.styles';
+import { TextLarge, TextMedium, TextSmall } from '../../global.styles';
 
 export const ListItemsCard = ({ listItem, navigation }) => {
   const { name, url, price, external_image, quantity } = listItem;
@@ -45,22 +43,22 @@ export const ListItemsCard = ({ listItem, navigation }) => {
             <TextLarge>kr {price}</TextLarge>
           </InfoPriceContainer>
           <InfoQuantityContainer>
-            <TextSmall>Quantity: {quantity}</TextSmall>
+            <TextMedium>Quantity: {quantity}</TextMedium>
           </InfoQuantityContainer>
         </ItemInfoContainer>
       </NavToDetailsPressable>
       <ItemMenuContainer>
         <ItemMenuLinks onPress={() => WebBrowser.openBrowserAsync(url)}>
           <Icon name='link' type='material-community' size={30} />
-          <ItemMenuLinksText>Product link</ItemMenuLinksText>
+          <TextSmall>Product link</TextSmall>
         </ItemMenuLinks>
         <ItemMenuLinks onPress={() => console.log('Pressed')}>
           <Icon name='playlist-plus' type='material-community' size={30} />
-          <ItemMenuLinksText>Add to list</ItemMenuLinksText>
+          <TextSmall>Add to list</TextSmall>
         </ItemMenuLinks>
         <ItemMenuLinks onPress={() => console.log('Pressed')}>
           <Icon name='share' type='material-community' size={30} />
-          <ItemMenuLinksText>Share</ItemMenuLinksText>
+          <TextSmall>Share</TextSmall>
         </ItemMenuLinks>
       </ItemMenuContainer>
     </ItemCard>

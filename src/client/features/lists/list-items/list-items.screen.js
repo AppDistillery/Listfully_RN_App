@@ -13,6 +13,7 @@ import {
   BackBtnContainer,
   BackBtnRightSpace
 } from '../../../components/utility/back-btn.component';
+import { SearchAndFilter } from '../../../components/utility/search-and-filter.component';
 
 export const ListItemsScreen = ({ navigation, route }) => {
   const { name, items } = route.params.listItems;
@@ -22,6 +23,7 @@ export const ListItemsScreen = ({ navigation, route }) => {
       <SafeArea>
         <ListPagesContainer>
           <BackBtn navigate={navigation} name={name} />
+          <SearchAndFilter />
           <FlexContainer>
             <FlatList
               data={items}

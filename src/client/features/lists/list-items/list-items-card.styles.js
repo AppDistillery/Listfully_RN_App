@@ -5,7 +5,7 @@ export const ItemCard = styled(View)`
   flex-direction: row;
   margin: 3px;
   height: 150px;
-  background-color: ${({ theme }) => theme.colors.linen40};
+  background-color: ${({ theme }) => theme.colors.linen};
 `;
 
 export const NavToDetailsPressable = styled(Pressable)`
@@ -46,18 +46,6 @@ export const InfoQuantityContainer = styled(View)`
   justify-content: center;
 `;
 
-export const TextLarge = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
-export const TextSmall = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: ${({ theme }) => theme.fontSizes.caption};
-  color: ${({ theme }) => theme.colors.charcoal};
-`;
-
 export const ItemMenuContainer = styled(View)`
   flex: 2;
   align-items: center;
@@ -69,10 +57,4 @@ export const ItemMenuLinks = styled(Pressable)`
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-`;
-
-export const ItemMenuLinksText = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.links};
-  color: ${({ theme }) => theme.colors.charcoal};
 `;

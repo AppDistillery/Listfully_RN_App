@@ -9,6 +9,7 @@ import {
   PageTitle,
   FlexContainer
 } from '../../global.styles';
+import { SearchAndFilter } from '../../../components/utility/search-and-filter.component';
 
 export const ListsScreen = ({ navigation }) => {
   return (
@@ -16,6 +17,7 @@ export const ListsScreen = ({ navigation }) => {
       <SafeArea>
         <ListPagesContainer>
           <PageTitle>Navn sine lister</PageTitle>
+          <SearchAndFilter />
           <FlexContainer>
             <FlatList
               data={DATA}

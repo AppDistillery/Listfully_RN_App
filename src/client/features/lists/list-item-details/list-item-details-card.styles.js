@@ -1,4 +1,4 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, Pressable } from 'react-native';
 import styled from 'styled-components/native';
 
 export const DetailsCard = styled(View)`
@@ -20,10 +20,17 @@ export const DetailsImage = styled(Image)`
   height: 100%;
 `;
 
-export const DetailIconContainer = styled(View)`
+export const DetailMenuContainer = styled(View)`
   flex: 1;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+`;
+
+export const DetailsMenuLinks = styled(Pressable)`
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 export const DetailsInfoContainer = styled(View)`
@@ -34,18 +41,17 @@ export const DetailsInfoContainer = styled(View)`
   width: 100%;
 `;
 
-export const DetailsInfoTextContainer = styled(View)`
+export const DetailsInfoTextContainerLarge = styled(View)`
+  flex: 2;
+  justify-content: flex-start;
+`;
+
+export const DetailsInfoTextContainerMedium = styled(View)`
   flex: 1;
   justify-content: center;
 `;
 
-export const DetailsInfoTextPressable = styled(View)`
-  flex: 1;
+export const DetailsInfoTextContainerSmall = styled(View)`
+  flex: 0.5;
   justify-content: center;
-`;
-
-export const DetailsText = styled(Text)`
-  font-family: ${({ theme }) => theme.fonts.title};
-  font-size: ${({ theme }) => theme.fontSizes.h6};
-  color: ${({ theme }) => theme.colors.charcoal};
 `;

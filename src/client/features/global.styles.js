@@ -54,9 +54,31 @@ export const BtnText = styled(Text)`
   color: ${({ theme }) => theme.colors.pearl};
 `;
 
+export const TextLarge = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.h6};
+  color: ${({ theme }) => theme.colors.charcoal};
+`;
+
+export const TextMedium = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes.caption};
+  color: ${({ theme }) => theme.colors.charcoal};
+`;
+
+export const TextSmall = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.links};
+  color: ${({ theme }) => theme.colors.charcoal};
+`;
+
 export const TextInputWide = styled(TextInput)`
   width: 75%;
   border-bottom-width: 1px;
+`;
+
+export const SpacerFlex05 = styled(View)`
+  flex: 0.5;
 `;
 
 export const SpacerFlex1 = styled(View)`

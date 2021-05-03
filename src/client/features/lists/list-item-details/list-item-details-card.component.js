@@ -7,12 +7,21 @@ import {
   DetailsCard,
   DetailsImageContainer,
   DetailsImage,
-  DetailIconContainer,
+  DetailMenuContainer,
+  DetailsMenuLinks,
   DetailsInfoContainer,
   DetailsInfoTextContainer,
-  DetailsInfoTextPressable,
-  DetailsText
+  DetailsInfoTextContainerLarge,
+  DetailsInfoTextContainerMedium,
+  DetailsInfoTextContainerSmall
 } from './list-item-details-card.styles';
+import {
+  SpacerFlex1,
+  SpacerFlex05,
+  TextSmall,
+  TextLarge,
+  TextMedium
+} from '../../global.styles';
 
 export const ListItemDetailsCard = ({ details }) => {
   const { url, name, price, quantity, external_image, description } = details;
@@ -25,30 +34,44 @@ export const ListItemDetailsCard = ({ details }) => {
           }}
         />
       </DetailsImageContainer>
-      <DetailIconContainer>
-        <Icon name='playlist-add' type='material' />
-      </DetailIconContainer>
+      <DetailMenuContainer>
+        <SpacerFlex05 />
+        <DetailsMenuLinks onPress={() => WebBrowser.openBrowserAsync(url)}>
+          <Icon name='link' type='material-community' size={35} />
+          <TextSmall>Link</TextSmall>
+        </DetailsMenuLinks>
+        <DetailsMenuLinks onPress={() => console.log('Pressed')}>
+          <Icon name='playlist-plus' type='material-community' size={35} />
+          <TextSmall>Add to list</TextSmall>
+        </DetailsMenuLinks>
+        <DetailsMenuLinks onPress={() => console.log('Pressed')}>
+          <Icon name='share' type='material-community' size={35} />
+          <TextSmall>Share</TextSmall>
+        </DetailsMenuLinks>
+        <DetailsMenuLinks onPress={() => console.log('Pressed')}>
+          <Icon
+            name='square-edit-outline'
+            type='material-community'
+            size={35}
+          />
+          <TextSmall>Edit info</TextSmall>
+        </DetailsMenuLinks>
+        <SpacerFlex05 />
+      </DetailMenuContainer>
       <DetailsInfoContainer>
-        <DetailsInfoTextContainer>
-          <DetailsText>{name}</DetailsText>
-        </DetailsInfoTextContainer>
-        <DetailsInfoTextPressable
-          onPress={() => WebBrowser.openBrowserAsync(url)}
-        >
-          <DetailsText>
-            Link to produkt{' '}
-            <Icon name='external-link-alt' type='font-awesome-5' size={20} />
-          </DetailsText>
-        </DetailsInfoTextPressable>
-        <DetailsInfoTextContainer>
-          <DetailsText>kr {price}</DetailsText>
-        </DetailsInfoTextContainer>
-        <DetailsInfoTextContainer>
-          <DetailsText>Quantity: {quantity}</DetailsText>
-        </DetailsInfoTextContainer>
-        <DetailsInfoTextContainer>
-          <DetailsText>{description}</DetailsText>
-        </DetailsInfoTextContainer>
+        <DetailsInfoTextContainerSmall>
+          <TextLarge>{name}</TextLarge>
+        </DetailsInfoTextContainerSmall>
+        <DetailsInfoTextContainerSmall>
+          <TextLarge>kr {price}</TextLarge>
+        </DetailsInfoTextContainerSmall>
+        <DetailsInfoTextContainerSmall>
+          <TextLarge>Quantity: {quantity}</TextLarge>
+        </DetailsInfoTextContainerSmall>
+        <DetailsInfoTextContainerLarge>
+          <TextMedium>Description:</TextMedium>
+          <TextLarge>{description}</TextLarge>
+        </DetailsInfoTextContainerLarge>
       </DetailsInfoContainer>
     </DetailsCard>
   );
