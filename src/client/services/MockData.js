@@ -5,6 +5,7 @@ export const DATA = [
     description: 'All items stored on your listfully',
     share: 'IN29XfrR0VwQSJjxMzoq',
     url: 'http://localhost:8000/api/list/aaaa/',
+    // availability: 'private',
     items: [
       {
         id: 'aa01',

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Icon } from 'react-native-elements';
+import { AuthenticationContext } from '../../../services/authentication/authentication.context';
 
 import { PageContainer, PageTitle, Btn, BtnText } from '../../global.styles';
 
 export const Menu = ({ navigation }) => {
+  const { onLoginAndLogout } = useContext(AuthenticationContext);
+
   return (
     <>
       <PageContainer>
@@ -38,10 +41,19 @@ export const Menu = ({ navigation }) => {
           />
           <BtnText>Secret Santa</BtnText>
         </Btn>
-        {/* <Btn onPress={() => navigation.navigate('')}>
-          <Icon name='' type='' size={20} color='#FAFAFC' />
-          <BtnText></BtnText>
-        </Btn> */}
+        <Btn
+          onPress={() => {
+            onLoginAndLogout();
+          }}
+        >
+          <Icon
+            name='sign-out-alt'
+            type='font-awesome-5'
+            size={20}
+            color='#FAFAFC'
+          />
+          <BtnText>Logout</BtnText>
+        </Btn>
       </PageContainer>
     </>
   );
