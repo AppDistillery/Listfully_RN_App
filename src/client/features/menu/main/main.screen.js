@@ -5,7 +5,7 @@ import { AuthenticationContext } from '../../../services/authentication/authenti
 import { PageContainer, PageTitle, Btn, BtnText } from '../../global.styles';
 
 export const Menu = ({ navigation }) => {
-  const { onLoginAndLogout } = useContext(AuthenticationContext);
+  const { onLogout } = useContext(AuthenticationContext);
 
   return (
     <>
@@ -43,7 +43,7 @@ export const Menu = ({ navigation }) => {
         </Btn>
         <Btn
           onPress={() => {
-            onLoginAndLogout();
+            onLogout();
           }}
         >
           <Icon

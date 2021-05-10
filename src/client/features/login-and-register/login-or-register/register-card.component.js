@@ -5,8 +5,6 @@ import { Btn, BtnText } from '../../global.styles';
 import { AuthenticationContext } from '../../../services/authentication/authentication.context';
 
 export const RegisterCard = () => {
-  const { onLoginAndLogout } = useContext(AuthenticationContext);
-
   return (
     <>
       <InputContainer>

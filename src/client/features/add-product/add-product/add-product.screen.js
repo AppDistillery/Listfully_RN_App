@@ -157,21 +157,6 @@ export const AddProduct = ({ navigation }) => {
             {!toggleAvtiveSaveBtn ? (
               <Btn
                 onPress={async () => {
-                  console.log(
-                    productName +
-                      ' ' +
-                      typeof productName +
-                      ' ' +
-                      productName.length +
-                      '\n' +
-                      productLink +
-                      ' ' +
-                      typeof productLink +
-                      '\n' +
-                      productPrice +
-                      ' ' +
-                      typeof productPrice
-                  );
                   await saveDataAndReset();
                 }}
               >

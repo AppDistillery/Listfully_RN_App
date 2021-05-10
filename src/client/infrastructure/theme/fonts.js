@@ -7,6 +7,7 @@ export const fonts = {
 
 export const fontSizes = {
   links: '10px',
+  error: '12px',
   caption: '14px',
   button: '14px',
   body: '16px',
