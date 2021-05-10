@@ -1,18 +1,7 @@
-import {
-  Text,
-  View,
-  Pressable,
-  TextInput,
-  KeyboardAvoidingView,
-  Dimensions
-} from 'react-native';
+import { Text, View, Pressable, TextInput, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
 const windowWidth = Math.floor(Dimensions.get('window').width / 2);
-
-export const KeyboardAvoidingContainer = styled(KeyboardAvoidingView)`
-  flex: 1;
-`;
 
 export const PageContainer = styled(View)`
   flex: 1;
@@ -41,6 +30,16 @@ export const Btn = styled(Pressable)`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.charcoal};
+  margin: 10px;
+  height: 50px;
+  width: 240px;
+`;
+
+export const BtnDisabled = styled(Pressable)`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.steelGray};
   margin: 10px;
   height: 50px;
   width: 240px;
@@ -75,6 +74,9 @@ export const TextSmall = styled(Text)`
 export const TextInputWide = styled(TextInput)`
   width: 75%;
   border-bottom-width: 1px;
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.h6};
+  color: ${({ theme }) => theme.colors.charcoal};
 `;
 
 export const SpacerFlex05 = styled(View)`

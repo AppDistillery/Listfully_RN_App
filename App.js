@@ -18,6 +18,7 @@ import {
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat';
 import { Navigation } from './src/client/infrastructure/navigation';
+import { AuthenticationContextProvider } from './src/client/services/authentication/authentication.context';
 
 export default function App() {
   const [openSansLoaded] = useOpenSans({
@@ -40,7 +41,9 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navigation />
+        <AuthenticationContextProvider>
+          <Navigation />
+        </AuthenticationContextProvider>
       </ThemeProvider>
       <StatusBar style='auto' />
     </>

@@ -3,14 +3,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { Home } from '../../features/home/home.screen';
-import { Search } from '../../features/search/search.screen';
 import { ListsNavigator } from './lists.navigator';
-import { MenuNavigator } from './menu.navigator';
-import { AddProductNavigator } from './add-product.navigator';
+import { LoginOrRegisterNavigator } from './login-register.navigator';
+import { LoginOrRegister } from '../../features/login-and-register/login-or-register/login-or-register.screen';
 
 const Tab = createBottomTabNavigator();
 
-export const AppNavigator = () => {
+export const NoUserNavigator = () => {
   return (
     <Tab.Navigator
       initialRouteName='Home'
@@ -22,14 +21,8 @@ export const AppNavigator = () => {
             iconName = focused ? 'home-sharp' : 'ios-home-outline';
           } else if (route.name === 'Lists') {
             iconName = focused ? 'list-sharp' : 'list-outline';
-          } else if (route.name === 'Add') {
-            iconName = 'ios-add-circle-sharp';
-            size = 35;
-            color = '#A05E38';
-          } else if (route.name === 'Search') {
-            iconName = focused ? 'ios-search-sharp' : 'ios-search-outline';
-          } else if (route.name === 'Menu') {
-            iconName = focused ? 'ios-menu-sharp' : 'ios-menu-outline';
+          } else if (route.name === 'User') {
+            iconName = focused ? 'person-sharp' : 'person-outline';
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -42,9 +35,7 @@ export const AppNavigator = () => {
     >
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Lists' component={ListsNavigator} />
-      <Tab.Screen name='Add' component={AddProductNavigator} />
-      <Tab.Screen name='Search' component={Search} />
-      <Tab.Screen name='Menu' component={MenuNavigator} />
+      <Tab.Screen name='User' component={LoginOrRegister} />
     </Tab.Navigator>
   );
 };
