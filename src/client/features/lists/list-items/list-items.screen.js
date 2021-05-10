@@ -1,18 +1,10 @@
 import React from 'react';
-import { Pressable, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { SafeArea } from '../../../components/utility/safe-area.component';
 import { ListItemsCard } from './list-items-card.component';
 
-import {
-  ListPagesContainer,
-  PageTitle,
-  FlexContainer
-} from '../../global.styles';
-import {
-  BackBtn,
-  BackBtnContainer,
-  BackBtnRightSpace
-} from '../../../components/utility/back-btn.component';
+import { ListPagesContainer, FlexContainer } from '../../global.styles';
+import { BackBtn } from '../../../components/utility/back-btn.component';
 import { SearchAndFilter } from '../../../components/utility/search-and-filter.component';
 
 export const ListItemsScreen = ({ navigation, route }) => {

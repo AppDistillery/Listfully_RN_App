@@ -71,6 +71,12 @@ export const TextSmall = styled(Text)`
   color: ${({ theme }) => theme.colors.charcoal};
 `;
 
+export const ErrorText = styled(Text)`
+  font-family: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fontSizes.error};
+  color: ${({ theme }) => theme.colors.coralRed};
+`;
+
 export const TextInputWide = styled(TextInput)`
   width: 75%;
   border-bottom-width: 1px;
