@@ -1,14 +1,7 @@
-import {
-  View,
-  Image,
-  TextInput,
-  Text,
-  Pressable,
-  FlatList
-} from 'react-native';
+import { View, Image, TextInput, Text, Pressable } from 'react-native';
 import styled from 'styled-components/native';
 
-export const AddImageContainer = styled(View)`
+export const AddImageContainer = styled(Pressable)`
   flex: 2;
   align-items: center;
   justify-content: center;

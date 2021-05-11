@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FlatList } from 'react-native';
 import { Icon, Overlay } from 'react-native-elements';
 import { SafeArea } from '../../../components/utility/safe-area.component';
 import { CURRENCIES } from '../../../services/CurrencyData';
 import { DATA } from '../../../services/MockData';
+import { PhotoContext } from '../../../services/photo/photo.context';
 
 import {
   AddImageContainer,
@@ -51,6 +52,7 @@ export const AddProduct = ({ navigation }) => {
   const [productQuantity, onChangeProductQuantity] = useState('1');
   const [productDescription, onChangeProductDescription] = useState(null);
   const [toggleAvtiveSaveBtn, setToggleAvtiveSaveBtn] = useState(true);
+  const { photoUri, checkPhoto } = useContext(PhotoContext);
 
   const toggleCurrencyModal = () => {
     setCurrencyModalVisible(!currencyModalVisible);
@@ -87,6 +89,7 @@ export const AddProduct = ({ navigation }) => {
     onChangeProductQuantity('1');
     onChangeProductDescription(null);
     setToggleAvtiveSaveBtn(true);
+    checkPhoto(null);
   };
 
   const saveDataAndReset = () => {
@@ -105,10 +108,14 @@ export const AddProduct = ({ navigation }) => {
     <KeyboardAvoid>
       <SafeArea>
         <PageContainer>
-          <AddImageContainer>
-            <AddProductImage
-              source={require('../../../../../assets/placeholder-image.png')}
-            />
+          <AddImageContainer onPress={() => navigation.navigate('Camera')}>
+            {photoUri ? (
+              <AddProductImage source={{ uri: photoUri }} />
+            ) : (
+              <AddProductImage
+                source={require('../../../../../assets/placeholder-image.png')}
+              />
+            )}
           </AddImageContainer>
           <AddProductInputContainer>
             <TextInputWide

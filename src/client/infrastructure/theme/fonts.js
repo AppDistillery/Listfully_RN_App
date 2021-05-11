@@ -1,4 +1,5 @@
 export const fonts = {
+  homeTitle: 'Montserrat_600SemiBold',
   title: 'OpenSans_600SemiBold',
   body: 'OpenSans_400Regular',
   buttons: 'Montserrat_400Regular',
