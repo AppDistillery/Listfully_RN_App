@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Input, Icon } from 'react-native-elements';
 import { InputContainer } from './login-register.styles';
-import { Btn, BtnText } from '../../global.styles';
+import { Btn, BtnDisabled, BtnText } from '../../global.styles';
 import { AuthenticationContext } from '../../../services/authentication/authentication.context';
 
 export const RegisterCard = () => {
@@ -13,8 +13,8 @@ export const RegisterCard = () => {
           leftIcon={<Icon name='email' type='material-community' size={25} />}
         />
         <Input
-          placeholder='Choose display name'
-          leftIcon={<Icon name='verified-user' type='material' size={25} />}
+          placeholder='Your full name'
+          leftIcon={<Icon name='person' type='material' size={25} />}
         />
         <Input
           placeholder='Choose password'
@@ -27,7 +27,7 @@ export const RegisterCard = () => {
           secureTextEntry={true}
         />
       </InputContainer>
-      <Btn onPress={() => console.log('Register')}>
+      <BtnDisabled onPress={() => console.log('Register')}>
         <Icon
           name='user-plus'
           type='font-awesome-5'
@@ -35,7 +35,7 @@ export const RegisterCard = () => {
           color='#FAFAFC'
         />
         <BtnText>Register user</BtnText>
-      </Btn>
+      </BtnDisabled>
     </>
   );
 };

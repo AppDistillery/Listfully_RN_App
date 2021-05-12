@@ -83,5 +83,22 @@ export const USERS = [
       first_name: 'Ola'
     },
     first_name: 'Ola'
+  },
+  {
+    id: 'usr006',
+    username: 'christine@test.no',
+    email: 'christine@test.no',
+    password: 'christine123',
+    profile: {
+      id: 'pro006',
+      name: 'Christine Corkery Steinsholt',
+      image: '',
+      birth_date: '10.06.1978',
+      has_facebook: false,
+      has_email_consent: true,
+      has_dismissed_onboarding: true,
+      first_name: 'Christine'
+    },
+    first_name: 'Christine'
   }
 ];
