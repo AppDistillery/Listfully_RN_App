@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { FlatList } from 'react-native';
-import { Icon, Overlay } from 'react-native-elements';
+import { Icon } from 'react-native-elements';
 import { SafeArea } from '../../../components/utility/safe-area.component';
 import { CURRENCIES } from '../../../services/CurrencyData';
 import { DATA } from '../../../services/MockData';
@@ -10,8 +9,6 @@ import {
   AddImageContainer,
   AddProductImage,
   AddProductInputContainer,
-  SaveToListFlatlistContainer,
-  CurrencyFlatlistContainer,
   CurrencyPicker,
   CurrencyPickerText,
   PriceAndQuantityContainer,
@@ -19,7 +16,6 @@ import {
   PriceTextInput,
   QuantityTextInput,
   SaveBtnContainer,
-  TextCenterContainer,
   SaveToListPicker,
   SaveToListPickerText,
   QuantityContainer,
@@ -31,12 +27,12 @@ import {
   BtnText,
   PageContainer,
   SpacerFlex1,
-  TextInputWide,
-  TextLarge
+  TextInputWide
 } from '../../global.styles';
 import { KeyboardAvoid } from '../../../components/utility/keyboard-avoiding.component';
-import { CurrencyCheckbox } from './currency-checkbox.component';
-import { SaveToListCheckbox } from './list-checkbox.component';
+import { ConfirmationModal } from './modals/confirmation.modal';
+import { SaveToListModal } from './modals/saveToList.modal';
+import { CurrencyModal } from './modals/currency.modal';
 
 export const AddProduct = ({ navigation }) => {
   const [saveToList, setSaveToList] = useState('Saved for later');
@@ -188,78 +184,29 @@ export const AddProduct = ({ navigation }) => {
             )}
           </SaveBtnContainer>
 
-          {/* Save to list modal start */}
-          <Overlay
-            isVisible={saveToListModalVisible}
-            onBackdropPress={toggleSaveToListModal}
-          >
-            <TextCenterContainer>
-              <TextLarge>Choose currency</TextLarge>
-            </TextCenterContainer>
-            <SaveToListFlatlistContainer>
-              <FlatList
-                data={DATA}
-                renderItem={({ item }) => {
-                  {
-                    if (item.name === 'All') {
-                      return null;
-                    } else {
-                      return (
-                        <SaveToListCheckbox
-                          item={item}
-                          saveToList={saveToList}
-                          setSaveToList={setSaveToList}
-                        />
-                      );
-                    }
-                  }
-                }}
-                keyExtractor={(item) => item.id}
-              />
-            </SaveToListFlatlistContainer>
-            <Btn onPress={() => toggleSaveToListModal()}>
-              <BtnText>Save</BtnText>
-            </Btn>
-          </Overlay>
-          {/* Save to list modal end */}
+          {/* MODALS */}
 
-          {/* Currency modal start */}
-          <Overlay
-            isVisible={currencyModalVisible}
-            onBackdropPress={toggleCurrencyModal}
-          >
-            <TextCenterContainer>
-              <TextLarge>Choose currency</TextLarge>
-            </TextCenterContainer>
-            <CurrencyFlatlistContainer>
-              <FlatList
-                data={CURRENCIES}
-                renderItem={({ item }) => {
-                  return (
-                    <CurrencyCheckbox
-                      item={item}
-                      currency={currency}
-                      setCurrency={setCurrency}
-                    />
-                  );
-                }}
-                keyExtractor={(item) => item.code}
-              />
-            </CurrencyFlatlistContainer>
-            <Btn onPress={() => toggleCurrencyModal()}>
-              <BtnText>Save</BtnText>
-            </Btn>
-          </Overlay>
-          {/* Currency modal end */}
+          <SaveToListModal
+            visible={saveToListModalVisible}
+            toggleVisible={toggleSaveToListModal}
+            data={DATA}
+            saveToList={saveToList}
+            setSaveToList={setSaveToList}
+          />
 
-          {/* Confirmation modal start */}
-          <Overlay isVisible={confirmationModalVisible}>
-            <TextCenterContainer>
-              <TextLarge>Product: {productName}</TextLarge>
-              <TextLarge>Saved to: {saveToList}</TextLarge>
-            </TextCenterContainer>
-          </Overlay>
-          {/* Confirmation modal end */}
+          <CurrencyModal
+            visible={currencyModalVisible}
+            toggleVisible={toggleCurrencyModal}
+            data={CURRENCIES}
+            currency={currency}
+            setCurrency={setCurrency}
+          />
+
+          <ConfirmationModal
+            visible={confirmationModalVisible}
+            name={productName}
+            list={saveToList}
+          />
         </PageContainer>
       </SafeArea>
     </KeyboardAvoid>

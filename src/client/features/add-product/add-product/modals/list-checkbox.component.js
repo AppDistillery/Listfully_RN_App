@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CheckBox } from 'react-native-elements';
-import { colors } from '../../../infrastructure/theme/colors';
+import { colors } from '../../../../infrastructure/theme/colors';
 
 export const SaveToListCheckbox = ({ item, saveToList, setSaveToList }) => {
   const [listPickerChecked, setListPickerChecked] = useState(false);
