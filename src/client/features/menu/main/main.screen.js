@@ -20,7 +20,7 @@ export const Menu = ({ navigation }) => {
           />
           <BtnText>Profile</BtnText>
         </Btn>
-        <Btn onPress={() => navigation.navigate('Settings')}>
+        {/* <Btn onPress={() => navigation.navigate('Settings')}>
           <Icon name='settings' type='material' size={20} color='#FAFAFC' />
           <BtnText>Settings</BtnText>
         </Btn>
@@ -40,7 +40,7 @@ export const Menu = ({ navigation }) => {
             color='#FAFAFC'
           />
           <BtnText>Secret Santa</BtnText>
-        </Btn>
+        </Btn> */}
         <Btn
           onPress={() => {
             onLogout();

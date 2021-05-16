@@ -85,6 +85,21 @@ export const TextInputWide = styled(TextInput)`
   color: ${({ theme }) => theme.colors.charcoal};
 `;
 
+export const SearchContainer = styled(View)`
+  flex-direction: row;
+  align-items: center;
+  padding: ${({ theme }) => theme.space[3]};
+`;
+
+export const SearchBar = styled(View)`
+  flex: 5;
+`;
+
+export const Filter = styled(View)`
+  flex: 1;
+  justify-content: flex-end;
+`;
+
 export const SpacerFlex05 = styled(View)`
   flex: 0.5;
 `;

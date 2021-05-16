@@ -39,11 +39,11 @@ export const AddProduct = ({ navigation }) => {
   const [saveToListModalVisible, setSaveToListModalVisible] = useState(false);
   const [currency, setCurrency] = useState('NOK');
   const [currencyModalVisible, setCurrencyModalVisible] = useState(false);
-  const [confirmationModalVisible, setConfirmationModalVisible] = useState(
-    false
-  );
+  const [confirmationModalVisible, setConfirmationModalVisible] =
+    useState(false);
   const [productName, onChangeProductName] = useState(null);
   const [productLink, onChangeProductLink] = useState(null);
+  const [storeName, onChangeStoreName] = useState(null);
   const [productPrice, onChangeProductPrice] = useState(null);
   const [productQuantity, onChangeProductQuantity] = useState('1');
   const [productDescription, onChangeProductDescription] = useState(null);
@@ -64,9 +64,7 @@ export const AddProduct = ({ navigation }) => {
         productName !== null &&
         productName.length !== 0 &&
         productPrice !== null &&
-        productPrice.length !== 0 &&
-        productLink !== null &&
-        productLink.length !== 0
+        productPrice.length !== 0
       ) {
         setToggleAvtiveSaveBtn(false);
       } else {
@@ -88,16 +86,17 @@ export const AddProduct = ({ navigation }) => {
     checkPhoto(null);
   };
 
-  const saveDataAndReset = () => {
+  const saveDataAndOpenConfirmation = () => {
     /* Save functionality 
     here later...or make own function
     that runs this one? */
     setConfirmationModalVisible(true);
-    setTimeout(() => {
-      setConfirmationModalVisible(false);
-      resetFields();
-      navigation.navigate('Lists');
-    }, 2000);
+  };
+
+  const resetAndRedirect = () => {
+    resetFields();
+    setConfirmationModalVisible(false);
+    navigation.navigate('Lists');
   };
 
   return (
@@ -120,9 +119,14 @@ export const AddProduct = ({ navigation }) => {
               value={productName}
             />
             <TextInputWide
-              placeholder='Product Link (required)'
+              placeholder='Link to product/store'
               onChangeText={onChangeProductLink}
               value={productLink}
+            />
+            <TextInputWide
+              placeholder='Store name'
+              onChangeText={onChangeStoreName}
+              value={storeName}
             />
             <SaveToListPicker onPress={() => toggleSaveToListModal()}>
               <SaveToListPickerText>{saveToList}</SaveToListPickerText>
@@ -160,7 +164,7 @@ export const AddProduct = ({ navigation }) => {
             {!toggleAvtiveSaveBtn ? (
               <Btn
                 onPress={async () => {
-                  await saveDataAndReset();
+                  await saveDataAndOpenConfirmation();
                 }}
               >
                 <Icon
@@ -206,6 +210,7 @@ export const AddProduct = ({ navigation }) => {
             visible={confirmationModalVisible}
             name={productName}
             list={saveToList}
+            resetAndRedirect={resetAndRedirect}
           />
         </PageContainer>
       </SafeArea>
